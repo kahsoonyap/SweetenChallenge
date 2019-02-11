@@ -6,8 +6,10 @@ var delim = function(str) {
     '\'' : '\'',
     '\"' : '\"'
   };
+
   let stack = [];
   let ele = '';
+  
   for (i = 0; i < str.length; i++) {
     if (str[i] in delims) {
       stack.push(str[i]);

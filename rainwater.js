@@ -2,6 +2,7 @@ var rainwater = function(arr) {
   let right = 0;
   let count = 0;
   let total = 0;
+
   for (left = 0; left < arr.length - 1; left++) {
     if (arr[left] > 0) {
       right = left + 1;
@@ -9,6 +10,7 @@ var rainwater = function(arr) {
         count += arr[right];
         right++;
       }
+      
       if (arr[right] >= arr[left]) {
         total += arr[left] * (right - left - 1) - count;
         left = right - 1;
