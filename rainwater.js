@@ -10,7 +10,7 @@ var rainwater = function(arr) {
         count += arr[right];
         right++;
       }
-      
+
       if (arr[right] >= arr[left]) {
         total += arr[left] * (right - left - 1) - count;
         left = right - 1;
@@ -18,6 +18,7 @@ var rainwater = function(arr) {
     }
     count = 0;
   }
+  
   return total;
 }
 
