@@ -1,0 +1,17 @@
+<% @pokedex.each do |pokemon| %>
+  <button class="pokemon">
+    <%= pokemon["name"]["english"] %>
+  </button>
+  <div class="information">
+    <p>
+      <%= "Type: #{pokemon["type"].join(', ')}" %>
+    </p>
+    <p>
+      <%= "Attack Level: #{pokemon["base"]["Attack"]}" %>
+    </p>
+    <p>
+      <%= "Defense Level: #{pokemon["base"]["Defense"]}" %>
+    </p>
+    <br>
+  </div>
+<% end %>
